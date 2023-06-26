@@ -35,7 +35,7 @@ const ExpandingCircle = () => {
           setrightLeft(50 + 50*((Math.max(window.innerWidth, window.innerHeight))*1.414 - (window.scrollY - val.current))/Math.max(window.innerWidth, window.innerHeight) + "%");
           setCircleHeight(newSize.current);
           setCircleWidth(newSize.current);
-          setTechFont("50px");
+          setTechFont("4vw");
           setCirclePosition("fixed");
           setleftPosition("fixed");
           setrightPosition("fixed");

@@ -123,7 +123,9 @@ section:nth-child(odd)
 {
     height: 50vw;
     max-height: 600px;
-    margin-left: 5vmax;
+    min-height: 350px;
+    min-width: 300px;
+    margin-left: 5vw;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -137,7 +139,9 @@ section:nth-child(even)
 {
     height: 50vw;
     max-height: 600px;
-    margin-right: 5vmax;
+    min-height: 350px;
+    min-width: 300px;
+    margin-right: 5vw;
     display: flex;
     flex-direction: row-reverse;
     justify-content: right;
@@ -152,6 +156,8 @@ section > div {
     width: 40vw;
     height: 50vw;
     max-height: 600px;
+    min-height: 350px;
+    min-width: 300px;
     position: relative;
     margin: 20px;
     overflow: hidden;
@@ -163,6 +169,8 @@ img
     width: 100%;
     height: 50vw;
     max-height: 600px;
+    min-height: 350px;
+    min-width: 300px;
     filter: grayscale(100%);
     filter: brightness(.5);
     border-radius: 20px;
@@ -177,11 +185,12 @@ img:hover
 .project_name
 {
     font-size: 4.5vw;
+    white-space: nowrap;
 }
 
 section:nth-child(odd) .project_name
 {
-    margin-left: -7vw;
+    margin-left: -7vmax;
 }
 
 section:nth-child(even) .project_name
@@ -392,11 +401,44 @@ section:nth-child(even) .project_name
     .about_container
     {
         font-size: 15px;
-        width: 50vw;
+        width: 80vw;
         margin-left: auto;
         margin-right: auto;
         margin-top: 15vw;
         text-align: center;
+    }
+
+    .contact
+    {
+        flex-direction: column;
+        align-items: center;
+        gap: 10vh;
+    }
+
+    .contact_details
+    {
+        flex-direction: row;
+        font-size: 14px;
+    }
+
+    .contact_text
+    {
+        padding: 0;
+        font-size: 25px;
+        min-width: 300px;
+    }
+
+    .contact_details_val
+    {
+        justify-content: left;
+    }
+}
+
+@media (max-width: 670px)
+{
+    section > div
+    {
+        width: 300px;
     }
 }
 
