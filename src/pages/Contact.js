@@ -2,7 +2,7 @@ const Contact = () => {
 
   return (
     <>
-        <div className="contact">
+        <div className="contact" id="contact">
           <div className="contact_text">
               <div>Let me understand your values ​​and your needs.</div>
               <div>Let's create together something as unique as you.</div>

@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import $ from "jquery"
 
 function useParallax(value, distance) {
   return useTransform(value, [0, 1], [-distance, distance]);
@@ -49,7 +50,6 @@ const Home = () => {
   }, []);
 
   const { scrollYProgress } = useScroll();
-  // scrollYProgress = 100*scrollYProgress;
 
   const variants = {
     default: {
@@ -88,7 +88,6 @@ const Home = () => {
 
   const text_bioEnter = () => setCursorVariant("text_bio");
   const text_bannerEnter = () => setCursorVariant("text_banner");
-  // const text_contactEnter = () => setCursorVariant("text_contact");
   const textLeave = () => setCursorVariant("default");
 
   const scaleX = useSpring(scrollYProgress, {
@@ -96,6 +95,13 @@ const Home = () => {
     damping: 30,
     restDelta: 0.001
   });
+
+  // $(window).on("resize", function(){
+  //   if (($(".banner").height() + $(".container_bio").height() + $(".about_container_text").height())/(window.innerHeight) < 0.27 && window.innerWidth > 950) {
+  //     console.log("big!!!");
+  //     $(".hello").css("display", "block");
+  //   }
+  // })
 
   return (
     <>
@@ -106,7 +112,7 @@ const Home = () => {
             </div>
             
             <div className="connect" onMouseEnter={text_bannerEnter} onMouseLeave={textLeave}>
-              Connect
+              <a href="#contact">Connect</a>
             </div>
           </div>
 
@@ -118,9 +124,11 @@ const Home = () => {
           </div>
 
           <div className="about_container">
-            <div onMouseEnter={text_bannerEnter} onMouseLeave={textLeave}>
+            <div className="about_container_text" onMouseEnter={text_bannerEnter} onMouseLeave={textLeave}>
               Hello👋! I'm Arnav. I'm a stickler for detail and I ensure that the work I produce is always consistent of a high technical and aesthetic standard.
             </div>
+
+            <div className="hello"></div>
           </div>
         </div>
 

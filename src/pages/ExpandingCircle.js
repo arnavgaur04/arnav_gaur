@@ -13,26 +13,29 @@ const ExpandingCircle = () => {
   const [leftTop, setleftTop] = useState("35%"); // Initial size of the circle
   const [rightTop, setrightTop] = useState("45%"); // Initial size of the circle
   const [circleLeft, setCircleLeft] = useState("50%"); // Initial size of the circle
-  const [rightLeft, setrightLeft] = useState("100%"); // Initial size of the circle
-  const [leftLeft, setleftLeft] = useState("0%"); // Initial size of the circle
+  const [rightLeft, setrightLeft] = useState("75%"); // Initial size of the circle
+  const [leftLeft, setleftLeft] = useState("25%"); // Initial size of the circle
   const [circleTransform, setCircleTransform] = useState("translate(-50%, -50%)"); // Initial size of the circle
   const [circleBorder, setCircleBorder] = useState("50%"); // Initial size of the circle
   var newSize = useRef(0);
   var val = useRef(4*window.innerHeight);
   if ($(".project_heading").height() != undefined) {
-    val.current = $(".project").height() + $(".top_container").height();
+    val.current = $(".project").height() + $(".top_container").height() + 0.2*Math.max(window.innerHeight, window.innerWidth);
   }
   useEffect(() => {
     const handleScroll = () => {
-      if ((window.scrollY - val.current) < 0 || window.scrollY < val.current) {
+      console.log("scroll: " + window.scrollY);
+      console.log("top: " + val.current);
+
+      if ((window.scrollY - val.current) < 0) {
         setCircleHeight("0");
         setCircleWidth("0");
         setTechFont(0);
       } else {
         if (Math.max(window.innerWidth, window.innerHeight)*1.414 > (window.scrollY - val.current)) {
           newSize.current = window.scrollY - val.current; // You can adjust the division factor to control the expansion speed
-          setleftLeft(50 - 50*((Math.max(window.innerWidth, window.innerHeight))*1.414 - (window.scrollY - val.current))/Math.max(window.innerWidth, window.innerHeight) + "%");
-          setrightLeft(50 + 50*((Math.max(window.innerWidth, window.innerHeight))*1.414 - (window.scrollY - val.current))/Math.max(window.innerWidth, window.innerHeight) + "%");
+          setleftLeft(50 - 25*((Math.max(window.innerWidth, window.innerHeight))*1.414 - (window.scrollY - val.current))/Math.max(window.innerWidth, window.innerHeight) + "%");
+          setrightLeft(50 + 25*((Math.max(window.innerWidth, window.innerHeight))*1.414 - (window.scrollY - val.current))/Math.max(window.innerWidth, window.innerHeight) + "%");
           setCircleHeight(newSize.current);
           setCircleWidth(newSize.current);
           if (window.innerWidth > 1000) {
