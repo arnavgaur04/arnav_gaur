@@ -145,6 +145,8 @@ const Home = () => {
               <motion.div className="progress" style={{ scaleX }} />
 
           </div>
+
+          <div className="instruction">Keep scrolling <b>↓</b></div>
         </div>
 
     </>
