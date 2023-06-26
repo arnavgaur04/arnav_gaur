@@ -17,7 +17,7 @@ function Image({id, text_bioEnter, text_bannerEnter, textLeave, variants}) {
   return (
     <section>
       <motion.div ref={ref}>
-        <img src={`/${id}.jpg`} variants={variants} alt="A London skyscraper" onMouseEnter={text_bioEnter} onMouseLeave={textLeave}/>
+        <img src={`/${id}.jpg`} variants={variants} alt={proj[id-1]} onMouseEnter={text_bioEnter} onMouseLeave={textLeave}/>
       </motion.div>
       <motion.h2 className="project_name" onMouseEnter={text_bannerEnter} onMouseLeave={textLeave} style={{ y }}>{proj[id-1]}</motion.h2>
     </section>
