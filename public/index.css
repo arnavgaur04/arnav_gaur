@@ -190,7 +190,7 @@ img:hover
 
 section:nth-child(odd) .project_name
 {
-    margin-left: -7vmax;
+    margin-left: -7vw;
 }
 
 section:nth-child(even) .project_name
@@ -439,6 +439,29 @@ section:nth-child(even) .project_name
     section > div
     {
         width: 300px;
+    }
+
+    section:nth-child(odd), section:nth-child(even)
+    {
+        justify-content: center;
+        margin: 0;
+    }
+
+    section:nth-child(odd) .project_name
+    {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+    }
+    
+    section:nth-child(even) .project_name
+    {
+        writing-mode: vertical-lr;
+        text-orientation: mixed;
+    }
+
+    .contact_details
+    {
+        flex-direction: column;
     }
 }
 
