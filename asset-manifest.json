@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/arnav_gaur/static/js/main.5ee0efa0.js",
+    "main.js": "/arnav_gaur/static/js/main.dba0a60b.js",
     "index.html": "/arnav_gaur/index.html",
-    "main.5ee0efa0.js.map": "/arnav_gaur/static/js/main.5ee0efa0.js.map"
+    "main.dba0a60b.js.map": "/arnav_gaur/static/js/main.dba0a60b.js.map"
   },
   "entrypoints": [
-    "static/js/main.5ee0efa0.js"
+    "static/js/main.dba0a60b.js"
   ]
 }
