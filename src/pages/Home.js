@@ -13,12 +13,15 @@ function Image({id, text_bioEnter, text_bannerEnter, textLeave, variants}) {
   const { scrollYProgress } = useScroll({ target: ref });
 
   const y = useParallax(scrollYProgress, 150);
-  const proj = ["Youtube Clone", "Feedback Portal", "LNMgamers"]
+  const proj = ["Youtube Clone", "Feedback Portal", "LNMgamers"];
+  const url = ["https://github.com/arnavgaur04/YouTube_clone", "https://github.com/arnavgaur04/Feedback_portal", "https://github.com/arnavgaur04/LNMgamers"];
 
   return (
     <section>
       <motion.div ref={ref}>
+        <a href = {url[id-1]} target="_blank">
         <img src={`${id}.jpg`} variants={variants} alt={proj[id-1]} onMouseEnter={text_bioEnter} onMouseLeave={textLeave}/>
+        </a>
       </motion.div>
       <motion.h2 className="project_name" onMouseEnter={text_bannerEnter} onMouseLeave={textLeave} style={{ y }}>{proj[id-1]}</motion.h2>
     </section>
