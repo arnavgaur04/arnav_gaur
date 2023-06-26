@@ -458,6 +458,11 @@ section:nth-child(even) .project_name
         writing-mode: vertical-lr;
         text-orientation: mixed;
     }
+
+    .contact_details
+    {
+        flex-direction: column;
+    }
 }
 
 
