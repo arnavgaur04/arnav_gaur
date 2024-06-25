@@ -13,8 +13,8 @@ function Image({id, text_bioEnter, text_bannerEnter, textLeave, variants}) {
   const { scrollYProgress } = useScroll({ target: ref });
 
   const y = useParallax(scrollYProgress, 150);
-  const proj = ["Youtube Clone", "Feedback Portal", "LNMgamers"];
-  const url = ["https://github.com/arnavgaur04/YouTube_clone", "https://github.com/arnavgaur04/Feedback_portal", "https://github.com/arnavgaur04/LNMgamers"];
+  const proj = ["extract-from-docx", "Feedback Portal", "RapidReview"];
+  const url = ["https://www.npmjs.com/package/extract-from-docx", "https://github.com/arnavgaur04/Feedback_portal", "https://github.com/arnavgaur04/RapidReview"];
 
   return (
     <section>
@@ -99,13 +99,6 @@ const Home = () => {
     restDelta: 0.001
   });
 
-  // $(window).on("resize", function(){
-  //   if (($(".banner").height() + $(".container_bio").height() + $(".about_container_text").height())/(window.innerHeight) < 0.27 && window.innerWidth > 950) {
-  //     console.log("big!!!");
-  //     $(".hello").css("display", "block");
-  //   }
-  // })
-
   return (
     <>
         <div className="top_container">
@@ -122,8 +115,8 @@ const Home = () => {
           {/* <motion.div className="cursor" variants={variants} animate = {cursorVariant}></motion.div> */}
 
           <div className="container_bio">
-            <motion.div className="developer_text bio_text" onMouseEnter={text_bioEnter} onMouseLeave={textLeave} style={{x: x2}}>Creative & Technical</motion.div>
-            <motion.div className="fullstack_text bio_text" onMouseEnter={text_bioEnter} onMouseLeave={textLeave} style={{x: x1}}>Full-stack Developer</motion.div>
+            <div className="developer_text bio_text" onMouseEnter={text_bioEnter} onMouseLeave={textLeave}>Creative & Technical</div>
+            <div className="fullstack_text bio_text" onMouseEnter={text_bioEnter} onMouseLeave={textLeave}>Full-stack Developer</div>
           </div>
 
           <div className="about_container">
