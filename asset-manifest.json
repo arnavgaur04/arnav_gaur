@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/static/js/main.08141e06.js",
-    "index.html": "/index.html",
-    "main.08141e06.js.map": "/static/js/main.08141e06.js.map"
+    "main.js": "/arnav_gaur/static/js/main.08141e06.js",
+    "index.html": "/arnav_gaur/index.html",
+    "main.08141e06.js.map": "/arnav_gaur/static/js/main.08141e06.js.map"
   },
   "entrypoints": [
     "static/js/main.08141e06.js"
